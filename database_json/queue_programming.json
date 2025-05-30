@@ -1,0 +1,76 @@
+[
+    {
+        "name": "Move_Loop",
+        "commands": [
+            {
+                "id": "ac22face-2d0a-43ff-ac70-1f184f033f78",
+                "type": "logic",
+                "config": {
+                    "loop_type": "count",
+                    "iterations": 1
+                },
+                "subtype": "loop",
+                "body_commands": [
+                    {
+                        "id": "dc089def-0582-4b8a-86b7-f60ed86c259c",
+                        "type": "move",
+                        "config": {},
+                        "marker_id": 1
+                    },
+                    {
+                        "id": "0b3955f7-8097-4225-b72c-8ec921091120",
+                        "type": "move",
+                        "config": {},
+                        "marker_id": 2
+                    },
+                    {
+                        "id": "c9915936-560e-43fc-9ec4-1782c974397b",
+                        "type": "move",
+                        "config": {},
+                        "marker_id": 4
+                    },
+                    {
+                        "id": "c07700c6-9c67-42f0-a044-851136a9c108",
+                        "type": "move",
+                        "config": {},
+                        "marker_id": 3
+                    },
+                    {
+                        "id": "10c11727-d51f-46d7-8e0b-66c23a4c475f",
+                        "type": "logic",
+                        "config": {},
+                        "subtype": "if",
+                        "conditions": [
+                            {
+                                "id": "e8a87035-f243-4cd8-bb47-c8e7e8ee3cde",
+                                "type": "math",
+                                "config": {
+                                    "value_a_commands": [
+                                        {
+                                            "id": "4e55449e-f2be-4850-af29-2c0d52c97205",
+                                            "type": "battery",
+                                            "config": {},
+                                            "subtype": "status"
+                                        }
+                                    ],
+                                    "value_b": 20
+                                },
+                                "subtype": "less_than_or_equal_to"
+                            }
+                        ],
+                        "then_commands": [
+                            {
+                                "id": "66af97e0-b165-474b-ba02-922b7757b29a",
+                                "type": "battery",
+                                "config": {},
+                                "subtype": "charging"
+                            }
+                        ],
+                        "else_if_blocks": [],
+                        "else_commands": null
+                    }
+                ]
+            }
+        ]
+    }
+]
